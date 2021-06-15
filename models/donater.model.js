@@ -1,15 +1,15 @@
 module.exports = (sequelize, DataTypes) => {
-  const Donater = sequelize.define("Donater", {
+  const Donater = sequelize.define("donater", {
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    firstName: {
+    firstname: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    lastName: {
+    lastname: {
       type: DataTypes.STRING,
       allowNull: false
     },

@@ -26,6 +26,7 @@ app.use('/items', itemRouter);
 app.use('/bundle', bundleRouter);
 app.use('/donaters', donatersRouter)
 app.use('/beneficiers', beneficiersRouter)
+//app.use('/admin', adminRoute)...eklenecek
 
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 

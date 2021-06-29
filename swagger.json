@@ -99,7 +99,7 @@
         }
       }
     },
-    "/bundle/": {
+    "/category/": {
       "get": {
         "tags": [],
         "description": "",
@@ -117,7 +117,7 @@
         }
       }
     },
-    "/bundle/{id}": {
+    "/category/{id}": {
       "get": {
         "tags": [],
         "description": "",

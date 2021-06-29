@@ -1,8 +1,8 @@
 {
-    "HOST": "164.90.168.84",
-    "USER": "school_user",
-    "PASSWORD": "school_2021!",
-    "DB": "school_dev",
+   "HOST": "164.90.168.84",
+    "USER": "bp_user",
+    "PASSWORD": "SelTel21!",
+    "DB": "bp_db",
     "dialect": "mysql",
     "pool": {
       "max": 5,

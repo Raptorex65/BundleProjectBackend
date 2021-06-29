@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Donater = sequelize.define("donater", {
-    user_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true

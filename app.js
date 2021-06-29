@@ -11,7 +11,7 @@ const swaggerDocument = require('./swagger.json')
 
 // Routers
 const itemRouter = require('./routes/item-routes');
-const bundleRouter = require('./routes/bundle-routes')
+const categoryRouter = require('./routes/category-routes')
 const donatersRouter = require('./routes/donater-routes')
 const beneficiersRouter = require('./routes/beneficier-routes')
 
@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use('/items', itemRouter);
-app.use('/bundle', bundleRouter);
+app.use('/category', categoryRouter);
 app.use('/donaters', donatersRouter)
 app.use('/beneficiers', beneficiersRouter)
 //app.use('/admin', adminRoute)...eklenecek

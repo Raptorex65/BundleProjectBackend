@@ -1,0 +1,32 @@
+ const fetchItems = useCallback(
+    async () => {
+      const url = `http://localhost:3000/items`
+  setLoading(true)
+    try {
+      const response = await fetch(`${url}${query}`)
+      const data = await response.json()
+        console.log(items)
+      if (items) {
+        const newItems = items.map((item) => {
+          const {id, name, description, bundleItemPoint, categoryId}
+          = item
+
+          return {
+            itemId:id,
+            itemName:name,
+            itemDescription:description,
+            itemPoint:bundleItemPoint,
+            categoryId:categoryId
+          }
+        })
+
+        } catch (error) {
+      console.log(error)
+            setLoading(false)
+
+    }
+   }, [query]) 
+  
+  useEffect(() => {
+    fetchItems();
+  }, [fetchItems]);

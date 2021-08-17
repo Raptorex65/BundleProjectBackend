@@ -1,19 +1,47 @@
-
 module.exports = (sequelize, DataTypes) => {
   const Item = sequelize.define("item", {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
-    name: {
-      type: DataTypes.STRING
+    Name: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
-    description: {
-      type: DataTypes.STRING
+    Description: {
+      type: DataTypes.STRING,
+      allowNull: false
     },
-    bundleItemPoint: DataTypes.INTEGER,
-  });
+   
+    Address: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+    City: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+    Canton: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+    
+    BundleItemPoint: {
+      type:DataTypes.INTEGER,
+      allowNull: false
+    },
+    createdAt: {
+      allowNull: false,
+        type: DataTypes.DATE
+      },
+    updatedAt: {
+      allowNull: false,
+        type: DataTypes.DATE
+      }
+    });
+
   return Item;
 };
 

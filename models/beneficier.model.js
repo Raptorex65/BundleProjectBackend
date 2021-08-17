@@ -25,7 +25,15 @@ module.exports = (sequelize, DataTypes) => {
     bundleTotalPoints: {
       type: DataTypes.INTEGER,
       allowNull: false
-    }
+    },
+    createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE
+      },
+    updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE
+      }
   });
   return Beneficier;
 };

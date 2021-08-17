@@ -1,17 +1,25 @@
 const express = require('express');
 const router = express.Router();
-
-const service = require('../services/item-service.js')
+const service = require('../services/item-service')
+const asyncHandler = require('express-async-handler')
+const itemService = require('../services/item-service') 
 
 router.get('/', async function(req, res, next) {
   const Items = await service.getAllItems();
   res.send(Items);
 });
 
+/*
 router.post('/', async function(req, res, next) {
   const newItem = req.body; 
   const createdItem = await service.createItem(newItem);
   res.status(201).send(createdItem);
+});
+*/
+router.post('/', async function(req, res, next) {
+  const newItem = req.body; 
+  const createNewItem = await service.createItem(newItem);
+  res.status(201).send(createNewItem);
 });
 
 router.get('/:id', async function(req, res, next) {

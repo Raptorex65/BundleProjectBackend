@@ -4,6 +4,7 @@ const Item = require('../models/item.model');
 const Beneficier = require('../models/beneficier.model')
 const Donater = require('../models/donater.model')
 const Category = require('../models/category.model')
+const DForm = require('../models/dform.model')
 
 
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
@@ -26,11 +27,12 @@ db.item = Item(sequelize, Sequelize);
 db.beneficier = Beneficier(sequelize, Sequelize);
 db.donater = Donater(sequelize, Sequelize);
 db.category = Category(sequelize, Sequelize);
+db.dform = DForm(sequelize, Sequelize)
 // create relationship
-db.donater.hasMany(db.item);
-db.beneficier.hasMany(db.item);
+db.donater.hasMany(db.item)
+db.item.belongsTo(db.donater);
 
-db.category.hasMany(db.item, { foreignKey: 'cat_itemId' });
+db.category.hasMany(db.item);
 db.item.belongsTo(db.category);
 
 // use it to force to create the db from scratch 

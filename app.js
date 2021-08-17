@@ -14,7 +14,7 @@ const itemRouter = require('./routes/item-routes');
 const categoryRouter = require('./routes/category-routes')
 const donatersRouter = require('./routes/donater-routes')
 const beneficiersRouter = require('./routes/beneficier-routes')
-
+const donationformRouter = require('./routes/dform-routes')
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,8 +24,9 @@ app.use(cors());
 
 app.use('/items', itemRouter);
 app.use('/category', categoryRouter);
-app.use('/donaters', donatersRouter)
-app.use('/beneficiers', beneficiersRouter)
+app.use('/donaters', donatersRouter);
+app.use('/beneficiers', beneficiersRouter);
+app.use('/donationform', donationformRouter);
 //app.use('/admin', adminRoute)...eklenecek
 
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

@@ -99,7 +99,7 @@
         }
       }
     },
-    "/bundle/": {
+    "/category/": {
       "get": {
         "tags": [],
         "description": "",
@@ -117,7 +117,7 @@
         }
       }
     },
-    "/bundle/{id}": {
+    "/category/{id}": {
       "get": {
         "tags": [],
         "description": "",
@@ -176,32 +176,7 @@
       "post": {
         "tags": [],
         "description": "",
-        "parameters": [
-          {
-            "name": "obj",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "user_id": {
-                  "example": "any"
-                },
-                "firstname": {
-                  "example": "any"
-                },
-                "lastname": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "address": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "201": {
             "description": "Created"
@@ -259,12 +234,6 @@
       }
     },
     "/beneficiers/": {
-      "get": {
-        "tags": [],
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      },
       "post": {
         "tags": [],
         "description": "",
@@ -274,6 +243,12 @@
             "description": "Created"
           }
         }
+      },
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
       }
     },
     "/beneficiers/{id}": {
@@ -302,8 +277,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -321,6 +296,24 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/donationform/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      },
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "201": {
+            "description": "Created"
           }
         }
       }

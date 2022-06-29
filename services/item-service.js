@@ -3,7 +3,7 @@ const itemRepo = require('../persistency/item-repository');
 //Buradaki is istekleri repository'ye gonderilerek db uzerinden islem yapiliyor
 //Repodan islenerek hazir edilen veri router'a(routes) geri gonderiliyor
 const createItem = async(newItem) => {
-    return await itemRepo.create(newItem);
+    return await itemRepo.create(newItem)
 }
 
 const deleteItem = async(pId) => {

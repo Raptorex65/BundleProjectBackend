@@ -8,10 +8,13 @@
     "doc-gen": "node swagger.js"
   },
   "dependencies": {
+    "concurrently": "^6.2.0",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jotform": "^0.1.5",
     "morgan": "~1.9.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.6.2",

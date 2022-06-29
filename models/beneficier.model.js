@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, DataTypes) => {
   const Beneficier = sequelize.define("beneficier", {
-    user_id: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false
@@ -25,7 +25,15 @@ module.exports = (sequelize, DataTypes) => {
     bundleTotalPoints: {
       type: DataTypes.INTEGER,
       allowNull: false
-    }
+    },
+    createdAt: {
+        allowNull: false,
+        type: DataTypes.DATE
+      },
+    updatedAt: {
+        allowNull: false,
+        type: DataTypes.DATE
+      }
   });
   return Beneficier;
 };

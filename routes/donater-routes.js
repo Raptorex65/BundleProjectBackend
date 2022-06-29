@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const service = require('../services/beneficier-service.js')
+const service = require('../services/donater-service')
 
 router.get('/', async function(req, res, next) {
   const allDonaters = await service.getAllDonaters();

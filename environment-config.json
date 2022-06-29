@@ -1,14 +1,14 @@
 {
-   "HOST": "164.90.168.84",
-    "USER": "bp_user",
-    "PASSWORD": "SelTel21!",
-    "DB": "bp_db",
-    "dialect": "mysql",
-    "pool": {
-      "max": 5,
-      "min": 0,
-      "acquire": 30000,
-      "idle": 10000
-    },
-    "populationTimeOutInterval": 60000
+  "HOST": "database-1.cbytovvpw3i8.us-east-1.rds.amazonaws.com",
+  "USER": "bp_user",
+  "PASSWORD": "SelTel21!",
+  "DB": "bp_db",
+  "dialect": "mysql",
+  "pool": {
+    "max": 5,
+    "min": 0,
+    "acquire": 30000,
+    "idle": 10000
+  },
+  "populationTimeOutInterval": 60000
 }
